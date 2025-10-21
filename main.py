@@ -82,7 +82,9 @@ def speak(text):
 def main():
     print("هوش مصنوعی آماده است! با او صحبت کن (برای خروج بنویس 'خروج')")
     while True:
-        user_input = input("شما: ")
+        import streamlit as st
+user_input = st.text_input("شما:")
+
         if user_input.lower() == "خروج":
             break
         response = chat_with_ai(user_input)
